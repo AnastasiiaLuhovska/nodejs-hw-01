@@ -6,18 +6,25 @@
   "main": "index.js",
   "scripts": {
     "get-all": "node src/scripts/getAllContacts",
-    "generate": "node src/scripts/generateContacts.js",
+    "generate": "node --loader ts-node/esm  src/scripts/generateContacts.ts",
     "add-one": "node src/scripts/addOneContact.js",
     "count": "node src/scripts/countContacts.js",
     "remove-last": "node src/scripts/removeLastContact.js",
-    "remove-all": "node src/scripts/removeAllContacts.js"
+    "remove-all": "node src/scripts/removeAllContacts.js",
+    "read": "node --loader ts-node/esm src/utils/readContacts.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@types/node": "^22.15.24",
     "eslint": "^9.2.0",
-    "globals": "^15.1.0"
+    "globals": "^15.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0"
   }
 }

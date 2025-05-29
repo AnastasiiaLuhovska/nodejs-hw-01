@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
+import { Contact } from '../types/types.ts';
 
-export const createFakeContact = () => ({
+export const createFakeContact = ():Contact => ({
   id: faker.string.uuid(),
   name: faker.person.fullName(),
   phone: faker.phone.number(),
