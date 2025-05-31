@@ -7,4 +7,3 @@ export const readContacts = async ():Promise<Contact[]> => {
   return JSON.parse(data)
 };
 
-readContacts()

@@ -5,12 +5,12 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "get-all": "node src/scripts/getAllContacts",
+    "get-all": "node --loader ts-node/esm  src/scripts/getAllContacts.ts",
     "generate": "node --loader ts-node/esm  src/scripts/generateContacts.ts",
-    "add-one": "node src/scripts/addOneContact.js",
-    "count": "node src/scripts/countContacts.js",
-    "remove-last": "node src/scripts/removeLastContact.js",
-    "remove-all": "node src/scripts/removeAllContacts.js",
+    "add-one": "node --loader ts-node/esm  src/scripts/addOneContact.ts",
+    "count": "node --loader ts-node/esm  src/scripts/countContacts.ts",
+    "remove-last": "node --loader ts-node/esm  src/scripts/removeLastContact.ts",
+    "remove-all": "node --loader ts-node/esm  src/scripts/removeAllContacts.ts",
     "read": "node --loader ts-node/esm src/utils/readContacts.ts"
   },
   "keywords": [],
